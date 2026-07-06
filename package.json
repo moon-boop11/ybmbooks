@@ -1,0 +1,19 @@
+{
+  "name": "ybmbooks",
+  "version": "1.0.0",
+  "description": "YBM 영어원서 세트 - 상품 안내 웹사이트",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server -p 3000"
+  },
+  "keywords": [
+    "ybm",
+    "english",
+    "books"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
