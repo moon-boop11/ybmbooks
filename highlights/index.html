@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Highlights 4C Reading 108 · 상품 안내</title>
+<style>
+@font-face{font-family:'GmarketSans';font-weight:300;font-style:normal;src:url(fonts/Gmarket-300.woff) format('woff');font-display:swap}
+@font-face{font-family:'GmarketSans';font-weight:500;font-style:normal;src:url(fonts/Gmarket-500.woff) format('woff');font-display:swap}
+@font-face{font-family:'GmarketSans';font-weight:700;font-style:normal;src:url(fonts/Gmarket-700.woff) format('woff');font-display:swap}
+:root{--ink:#16243A;--teal:#0E7A60;--teal-d:#0A5746;--teal-t:#E3F2EC;--mint:#F5FAF7;
+ --paper:#fff;--line:#E2EAE6;--muted:#7E746B;--body:#413D38;--f:'GmarketSans',system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--f);font-weight:500;font-size:19.0px;color:var(--body);background:var(--mint);line-height:1.78;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+h2{font-weight:700;font-size:37.9px;color:var(--ink);line-height:1.34;letter-spacing:-.01em;margin-bottom:15px}
+section{padding:88px 0;border-bottom:1px solid var(--line)}
+.eyebrow{display:flex;align-items:center;gap:10px;font-size:16.1px;font-weight:700;color:var(--teal);letter-spacing:.03em;margin-bottom:19px}
+.eyebrow .num{font-size:16.1px;color:var(--teal-d);border:1px solid #BFE0D4;border-radius:999px;padding:2px 11px}
+.lead{font-size:20.7px;max-width:740px}
+.btn{display:inline-block;background:var(--teal);color:#fff;font-weight:700;font-size:17.2px;padding:11px 22px;border-radius:999px;text-decoration:none;transition:background .15s}
+.btn:hover{background:var(--teal-d)}
+.btn.lg{padding:16px 38px;font-size:19.5px}
+
+/* bar */
+.bar{position:sticky;top:0;z-index:50;background:rgba(251,248,244,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:700;font-size:19.5px;color:var(--ink)}
+.brand em{color:var(--teal);font-style:normal}
+
+/* hero */
+.hero{background:var(--ink);border-bottom:none;padding:70px 0 78px}
+.hero h1{color:#fff;font-weight:700;font-size:51.7px;line-height:1.3;margin:17px 0 19px}
+.hero h1 em{color:#7FC9B4;font-style:normal}
+.hero .eyebrow{color:#7FC9B4}.hero .eyebrow .num{color:#7FC9B4;border-color:#2E4A40}
+.hero .sub{color:#D6E2DC;font-size:21.8px;max-width:560px;margin-bottom:28px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+.chips{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:32px}
+.chip{background:#213A33;color:#DCEAE4;font-size:16.1px;padding:8px 15px;border-radius:999px;font-weight:500}
+.chip b{color:#7FC9B4;font-weight:700}
+.hero-logo{background:#fff;border-radius:18px;min-height:306px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;padding:46px 42px}
+.hero-logo img{width:100%;max-width:348px;height:auto;display:block}
+.hero-logo .cap{font-size:16.1px;color:var(--muted);font-weight:500;text-align:center}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:17px;margin-top:10px}
+.stat{padding:10px 14px;text-align:center;position:relative}
+.stat+.stat::before{content:'';position:absolute;left:0;top:14%;height:72%;width:1px;background:var(--line)}
+.stat .big{font-weight:700;font-size:33.3px;color:var(--teal-d);line-height:1.25}
+.stat .lbl{font-size:16.1px;color:var(--muted);margin-top:9px}
+
+/* real photos */
+.shot{margin-top:32px;border-radius:18px;overflow:hidden;background:var(--paper);border:1px solid var(--line);box-shadow:0 12px 32px rgba(40,30,20,.08)}
+.shot img{width:100%;display:block}
+.cap{font-size:16.1px;color:var(--muted);text-align:center;margin-top:13px}
+.pair{display:grid;grid-template-columns:repeat(3,1fr);gap:19px;margin-top:19px}
+.pair figure{margin:0;border-radius:15px;overflow:hidden;background:var(--paper);border:1px solid var(--line);box-shadow:0 7px 20px rgba(40,30,20,.06)}
+.pair img{width:100%;display:block}
+.shelf{margin-top:36px;background:var(--paper);border:1px solid var(--line);border-radius:19px;overflow:hidden;box-shadow:0 12px 32px rgba(40,30,20,.08)}
+.shelf img{width:100%;display:block}
+.shelf-txt{padding:28px 32px 32px}
+.shelf-txt h3{font-weight:700;font-size:28.7px;color:var(--ink);margin-bottom:11px}
+.shelf-txt p{font-size:18.4px}
+.tagrow{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.tag{background:var(--teal-t);color:var(--teal-d);font-size:15.5px;font-weight:700;padding:7px 14px;border-radius:999px}
+
+/* points */
+.points{display:grid;grid-template-columns:repeat(3,1fr);gap:19px;margin-top:32px}
+.point{background:var(--paper);border:1px solid var(--line);border-radius:15px;padding:26px}
+.point h3{font-weight:700;font-size:21.3px;color:var(--ink);margin-bottom:9px}
+.point p{font-size:17.2px;color:var(--muted)}
+
+/* why */
+.secfig{margin:26px 0 0;border-radius:17px;overflow:hidden;border:1px solid var(--line);background:#EFF6F2}
+.secfig img{width:100%;display:block}
+.secfig figcaption{padding:14px 19px;font-size:15.5px;color:var(--muted);line-height:1.62}
+.secfig figcaption b{color:var(--teal-d)}
+.secfig .dis{font-size:14.5px;color:#8FA69B}
+.wlist{display:flex;flex-direction:column;gap:19px;margin-top:26px}
+.wcard{background:var(--paper);border:1px solid var(--line);border-radius:17px;padding:29px 31px;display:flex;gap:25px;box-shadow:0 9px 26px rgba(40,30,20,.06)}
+.wnum{flex:none;width:56px;height:56px;border-radius:15px;background:var(--teal);color:#fff;font-weight:700;font-size:21px;display:flex;align-items:center;justify-content:center}
+.wbody{flex:1;min-width:0}
+.wbody h3{font-weight:700;font-size:24px;color:var(--ink);margin-bottom:14px;line-height:1.4}
+.wbody ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+.wbody li{font-size:18px;padding-left:18px;position:relative}
+.wbody li::before{content:"";position:absolute;left:0;top:12px;width:7px;height:7px;border-radius:50%;background:var(--teal)}
+.src{color:var(--muted);font-size:15px}
+
+/* series */
+.biggrid{display:grid;grid-template-columns:1fr 1fr;gap:21px;margin-top:30px}
+.smgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:19px;margin-top:21px}
+.big{background:var(--paper);border:1px solid var(--line);border-radius:17px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 9px 26px rgba(40,30,20,.06)}
+.strip{height:158px;background:#EFF6F2;display:flex;align-items:center;justify-content:center;gap:9px;padding:0 15px;overflow:hidden;border-bottom:1px solid var(--line)}
+.strip img{height:124px;width:auto;border-radius:3px;box-shadow:0 5px 14px rgba(0,0,0,.19);display:block;flex:none}
+.banner{width:100%;aspect-ratio:900/506;background:#EFF6F2;border-bottom:1px solid var(--line);overflow:hidden}
+.banner img{width:100%;height:100%;object-fit:cover;display:block}
+.ktags{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+.ktag{background:#E8F2ED;color:var(--teal-d);font-size:15.5px;font-weight:700;padding:8px 15px;border-radius:999px}
+.big .body{padding:24px 26px 26px}
+.big h3{font-weight:700;font-size:22.4px;color:var(--ink)}
+.meta{font-size:15.5px;color:var(--teal-d);font-weight:700;margin:4px 0 12px}
+.big p{font-size:16.7px}
+.big ul{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:9px}
+.big li{font-size:15.9px;padding-left:16px;position:relative}
+.big li::before{content:"";position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--teal)}
+.award{display:flex;align-items:flex-start;gap:8px;margin-top:16px;background:var(--teal-t);border-radius:10px;padding:10px 13px;font-size:14.7px;color:var(--teal-d);font-weight:700;line-height:1.55}
+.award svg{width:17px;height:17px;flex:none}
+.big.sm .strip{height:130px}.big.sm .strip img{height:101px}
+.big.sm .body{padding:21px 22px 23px}.big.sm h3{font-size:19.0px}.big.sm p{font-size:15.9px}
+.gtitle{font-weight:700;font-size:20.7px;color:var(--ink);margin:36px 0 15px;padding-left:13px;border-left:3px solid var(--teal)}
+.bgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:17px}
+.bcard{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;text-align:center;display:flex;flex-direction:column}
+.bimg{width:100%;aspect-ratio:1/1;background:#EFF6F2;border-bottom:1px solid var(--line);overflow:hidden}
+.bcard img{width:100%;height:100%;object-fit:contain;display:block}
+.btxt{padding:18px 16px 20px;flex:1}
+.bcard h5{font-weight:700;font-size:16.1px;color:var(--ink);line-height:1.4}
+.ko{display:block;font-size:14.4px;color:var(--teal-d);margin:3px 0 8px}
+.bcard p{font-size:14.9px;color:var(--muted);line-height:1.62}
+.divider{margin-top:46px;border-top:1px solid var(--line)}
+
+/* level */
+.levelbox{background:var(--paper);border:1px solid var(--line);border-radius:17px;padding:32px;margin-top:28px;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.rows{display:flex;flex-direction:column;gap:15px}
+.lvrow{display:flex;align-items:center;gap:15px}
+.lvrow .band{font-weight:700;color:#fff;background:var(--teal);border-radius:10px;padding:9px 0;width:104px;text-align:center;font-size:17.2px;flex:none}
+.lvrow .band.l2{background:#D9694A}.lvrow .band.l3{background:#E68A6E}
+.lvrow .d{font-size:17.2px}.lvrow .d b{color:var(--ink);font-weight:700}
+.lvimg{border-radius:14px;overflow:hidden;border:1px solid var(--line)}
+.lvimg img{width:100%;display:block}
+
+/* book viewer */
+.bk-wrap{margin-top:30px;display:flex;flex-direction:column;align-items:center;gap:21px}
+.bk{position:relative;width:100%;height:620px;perspective:3000px}
+.bk-book{position:relative;width:100%;height:100%;display:flex;filter:drop-shadow(0 16px 34px rgba(40,30,20,.16))}
+.bk-side{flex:1;height:100%;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.bk-side.l{border-radius:6px 0 0 6px;border-right:none}
+.bk-side.r{border-radius:0 6px 6px 0}
+.bk-side img{width:100%;height:100%;object-fit:contain;display:block}
+.bk-spine{position:absolute;left:50%;top:0;width:26px;height:100%;transform:translateX(-50%);z-index:5;pointer-events:none;background:linear-gradient(to right,rgba(0,0,0,0) 0%,rgba(0,0,0,.08) 40%,rgba(0,0,0,.14) 50%,rgba(0,0,0,.08) 60%,rgba(0,0,0,0) 100%)}
+.bk-leaf{position:absolute;top:0;left:50%;width:50%;height:100%;transform-origin:left center;transform-style:preserve-3d;transition:transform .62s cubic-bezier(.4,.05,.2,1);z-index:6}
+.bk-leaf.turning-next{transform:rotateY(-178deg)}
+.bk-face{position:absolute;inset:0;backface-visibility:hidden;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;overflow:hidden;box-shadow:0 0 30px rgba(0,0,0,.1)}
+.bk-face img{width:100%;height:100%;object-fit:contain;display:block}
+.bk-face.back{transform:rotateY(180deg);border-radius:6px 0 0 6px}
+.bk-face.front{border-radius:0 6px 6px 0}
+.bk-ctrl{display:flex;align-items:center;gap:19px}
+.bk-ctrl button{width:56px;height:56px;border:1px solid var(--line);background:var(--paper);border-radius:50%;cursor:pointer;color:var(--ink);display:flex;align-items:center;justify-content:center;transition:background .15s}
+.bk-ctrl button:hover{background:var(--teal-t)}
+.bk-ctrl button svg{width:24px;height:24px}
+.bk-ctrl button:disabled{opacity:.35;cursor:default}
+.dots{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+.dot{width:10px;height:10px;border-radius:50%;background:#CBDCD4;cursor:pointer;border:none;padding:0}
+.dot.on{background:var(--teal);transform:scale(1.25)}
+.bk-ctrl .cnt{font-size:17.2px;color:var(--muted);min-width:100px;text-align:center}
+.bk-hint{font-size:16.1px;color:var(--muted)}
+
+/* lineup */
+.lineup{display:grid;grid-template-columns:repeat(10,1fr);gap:8px;margin-top:26px}
+.lineup .cell{aspect-ratio:3/4;border:1px solid var(--line);border-radius:6px;background:#fff;overflow:hidden}
+.lineup .cell img{width:100%;height:100%;object-fit:cover;display:block}
+.toggle-btn{background:var(--paper);border:1px solid var(--line);color:var(--ink);font-family:var(--f);font-size:17.2px;font-weight:700;padding:12px 28px;border-radius:999px;cursor:pointer;transition:background .15s}
+.toggle-btn:hover{background:var(--teal-t)}
+
+/* price */
+.price{background:var(--ink);border-radius:21px;padding:46px;display:grid;grid-template-columns:1fr 1fr;gap:38px;align-items:center;color:#fff;margin-top:12px}
+.price .was{color:#9DB6AB;text-decoration:line-through;font-size:19.5px}
+.price .now{font-weight:700;font-size:63.2px;margin:7px 0;line-height:1}
+.price .per{color:#7FC9B4;font-weight:700;font-size:21.8px;margin-top:7px}
+.price ul{list-style:none}
+.price li{display:flex;gap:11px;padding:9px 0;border-bottom:1px solid #243A52;font-size:18.4px;color:#D6E2DC}
+.price li:last-child{border:none}
+.price li svg{width:19px;height:19px;flex:none;margin-top:4px;color:#7FC9B4}
+
+/* download */
+.dl{display:flex;align-items:center;gap:21px;background:var(--paper);border:1px solid var(--line);border-radius:17px;padding:26px 30px;margin-top:26px;flex-wrap:wrap}
+.dl-ico{width:57px;height:57px;border-radius:13px;background:var(--teal-t);display:flex;align-items:center;justify-content:center;flex:none}
+.dl-ico svg{width:27px;height:27px;color:var(--teal)}
+.dl-txt{flex:1;min-width:230px}
+.dl-txt h3{font-weight:700;font-size:21.3px;color:var(--ink);margin-bottom:5px}
+.dl-txt p{font-size:16.1px;color:var(--muted)}
+.dl-btn{flex:none;background:var(--teal);color:#fff;font-weight:700;font-size:17.2px;padding:14px 26px;border-radius:999px;text-decoration:none;display:inline-flex;align-items:center;gap:9px;transition:background .15s}
+.dl-btn:hover{background:var(--teal-d)}
+.dl-btn svg{width:18px;height:18px}
+
+/* shipping */
+.ship{display:grid;grid-template-columns:repeat(3,1fr);gap:19px;margin-top:28px}
+.ship .item{background:var(--paper);border:1px solid var(--line);border-radius:15px;padding:26px;text-align:center}
+.ship .item svg{width:32px;height:32px;color:var(--teal);margin-bottom:13px}
+.ship .item h3{font-weight:700;font-size:20.1px;color:var(--ink);margin-bottom:7px}
+.ship .item p{font-size:16.1px;color:var(--muted)}
+
+/* cta */
+.cta{background:var(--teal-t);border-bottom:none;text-align:center}
+.cta h2{font-size:40.2px;margin-bottom:13px}
+.cta p{font-size:20.7px;margin-bottom:30px}
+footer{background:var(--ink);color:#9DB6AB;text-align:center;padding:36px 0;font-size:16.1px}
+footer b{color:#fff;font-weight:700}
+
+@media(max-width:860px){
+ .hero-grid{grid-template-columns:1fr;gap:30px}
+ .hero h1{font-size:37.9px}
+ .stats{grid-template-columns:repeat(2,1fr)}
+ .points,.pair,.biggrid,.smgrid,.ship{grid-template-columns:1fr}
+ .wcard{flex-direction:column;gap:17px}
+ .bgrid{grid-template-columns:repeat(2,1fr)}
+ .levelbox,.price{grid-template-columns:1fr;gap:26px;padding:30px}
+ .lineup{grid-template-columns:repeat(5,1fr)}
+ .dl{flex-direction:column;align-items:flex-start}.dl-btn{width:100%;justify-content:center}
+ .bk{height:360px}
+ h2{font-size:31.0px}
+ section{padding:60px 0}
+ .strip{height:140px}.strip img{height:110px}
+}
+
+.ph{border:1.5px dashed #B4CBC1;background:#EAF2EE;border-radius:16px;display:flex;flex-direction:column;
+ align-items:center;justify-content:center;gap:10px;text-align:center;padding:26px;color:#7E9A8C;min-height:220px}
+.ph svg{width:38px;height:38px;opacity:.5}
+.ph b{font-weight:700;font-size:17px;color:#5F7D70}
+.ph span{font-size:14.5px;color:#8FA69B}
+.ph .fn{font-size:13.5px;color:#5F7D70;background:#DCEAE3;border-radius:8px;padding:5px 12px;margin-top:2px}
+.setgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:30px}
+.setcard{background:var(--paper);border:1px solid var(--line);border-radius:17px;overflow:hidden;
+ display:flex;flex-direction:column;box-shadow:0 9px 26px rgba(20,40,32,.06)}
+.setcard .banner{aspect-ratio:900/506}
+.setcard .body{padding:22px 24px 24px}
+.setbadge{width:44px;height:44px;border-radius:12px;background:var(--teal);color:#fff;font-weight:700;
+ font-size:20px;display:flex;align-items:center;justify-content:center;margin-bottom:13px}
+.setcard h3{font-weight:700;font-size:21px;color:var(--ink)}
+.setcard .lx{font-weight:700;font-size:33px;color:var(--teal-d);margin:10px 0 2px;line-height:1}
+.setcard .lx small{font-size:16px;color:var(--muted);font-weight:500}
+.setcard .w{font-size:15px;color:var(--muted);margin-bottom:12px}
+.track{height:9px;background:#EAF2EE;border-radius:99px;overflow:hidden}
+.track i{display:block;height:100%;border-radius:99px;background:var(--teal)}
+.setcard.a .track i{width:13%}.setcard.b .track i{width:50%}.setcard.c .track i{width:100%}
+.laddercap{margin-top:20px;text-align:center;font-size:17px;color:var(--teal-d);font-weight:700}
+@media(max-width:860px){.setgrid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<div class="bar"><div class="wrap">
+  <div class="brand">Highlights <em>4C Reading 108</em></div>
+  <a class="btn order-link" href="#">주문하기</a>
+</div></div>
+
+<!-- 01 HERO -->
+<header class="hero"><div class="wrap hero-grid">
+  <div>
+    <div class="eyebrow"><span class="num">01</span> HIGHLIGHTS 4C READING 108</div>
+    <h1>온라인 라이브러리와 연계되는<br><em>오프라인 영어 도서관</em></h1>
+    <p class="sub">호기심·창의·배려·자신감을 기르는 수준별 리더스 108권. 온라인으로 쓰던 그 책을, 실물 도서관으로 완성하세요.</p>
+    <div class="chips">
+      <span class="chip"><b>108권</b> 수준별 리더스</span>
+      <span class="chip">픽션·논픽션 균형</span>
+      <span class="chip">GK~초2</span>
+      <span class="chip"><b>199,000원</b></span>
+    </div>
+    <a class="btn lg order-link" href="#">주문하기</a>
+  </div>
+  <div class="hero-logo">
+    <img src="images/logo_highlights.png" alt="Highlights 로고">
+    <span class="cap">미국 대표 어린이 교육 콘텐츠</span>
+  </div>
+</div></header>
+
+<!-- 02 한눈에 핵심 -->
+<section><div class="wrap">
+  <div class="eyebrow"><span class="num">02</span> 한눈에 핵심</div>
+  <h2>숫자로 보는 구성</h2>
+  <div class="stats">
+    <div class="stat"><div class="big">108권</div><div class="lbl">수준별 리더스 (3세트)</div></div>
+    <div class="stat"><div class="big">57 : 51</div><div class="lbl">픽션·논픽션 균형 구성</div></div>
+    <div class="stat"><div class="big">GK–초2</div><div class="lbl">3세트 정밀 단계 구성</div></div>
+    <div class="stat"><div class="big">SEL</div><div class="lbl">전 권 사회정서학습 매핑</div></div>
+  </div>
+</div></section>
+
+<!-- 03 실물로 만나는 108권 -->
+<section><div class="wrap">
+  <div class="eyebrow"><span class="num">03</span> 실물로 만나는 108권</div>
+  <h2>사진으로 먼저 확인하세요</h2>
+  <p class="lead">108권이 실제로 어느 정도 분량인지, 3세트가 어떻게 구성되는지 눈으로 확인해 보세요.</p>
+  <div class="shot"><img src="images/photos/set_main.jpg" alt="Highlights 4C 108권 전체 구성"></div>
+  <p class="cap">Highlights 4C 108권 전체 구성</p>
+  <div class="pair">
+    <figure><img src="images/photos/set_angle1.jpg" alt="Set A 구성" loading="lazy"></figure>
+    <figure><img src="images/photos/set_angle2.jpg" alt="Set B 구성" loading="lazy"></figure>
+    <figure><img src="images/photos/set_angle3.jpg" alt="Set C 구성" loading="lazy"></figure>
+  </div>
+  <p class="cap">각도를 달리해 담은 전체 구성</p>
+  <div class="shelf">
+    <img src="images/photos/shelf.jpg" alt="책장에 꽂힌 Highlights 4C 108권" loading="lazy">
+    <div class="shelf-txt">
+      <h3>책장 한 칸이면 충분합니다</h3>
+      <p>108권 대부분이 얇은 리더스라, 실제로는 책장 한 칸에 모두 들어갑니다. 앞줄에 아이들이 좋아하는 표지를 세워두면, 지나가다 저절로 손이 갑니다.</p>
+      <div class="tagrow"><span class="tag">책장 한 칸</span><span class="tag">얇은 리더스 판형</span><span class="tag">표지 진열로 대출 유도</span></div>
+    </div>
+  </div>
+</div></section>
+
+<!-- 04 왜 하이라이츠 4C 인가 -->
+<section><div class="wrap">
+  <div class="eyebrow"><span class="num">04</span> 왜 하이라이츠 4C 인가</div>
+  <h2>원장님이 4C를 선택하는 이유</h2>
+  <p class="lead">Highlights 4C는 사회정서학습(SEL)에 초점을 맞춘 수준별 리더스로, <b>Curious·Creative·Caring·Confident</b> 네 가지 가치를 단계적으로 키웁니다. 단순히 좋은 책이어서가 아니라, 학원의 <b>운영·공간·상담</b>까지 바꾸기 때문에 선택합니다.</p>
+  <figure class="secfig">
+    <img src="images/photos/main_visual.jpg" alt="Highlights 4C 배치 예시" loading="lazy">
+    <figcaption><b>배치 예시</b> · 실물 도서관 배치 예시<br>
+      <span class="dis">참고용 이미지이며 실제 구성과 다를 수 있습니다.</span></figcaption>
+  </figure>
+  <div class="wlist"><div class="wcard"><div class="wnum">01</div><div class="wbody"><h3>온라인을 쓰고 계신다면, 실물이 학습을 완성합니다</h3><ul><li>온라인 <b>Highlights Library</b>의 책이 <b>실물로도 1:1 그대로</b> 존재합니다. 같은 책을 두 번 만나 학습이 정착됩니다.</li><li>워크시트·MCQ·정답지 등 출력물도 <b>온라인 LMS에서 그대로 내려받아</b> 쓸 수 있습니다.</li></ul></div></div><div class="wcard"><div class="wnum">02</div><div class="wbody"><h3>학부모 눈에 보이는 실물 도서관</h3><ul><li>온라인만 운영하면 학부모에게 <b>보여줄 것이 없습니다.</b> 책장에 쌓이는 실물이 곧 학원의 신뢰입니다.</li><li>유아·초저학년 학부모일수록 <b>스크린타임에 민감</b>합니다. 종이책은 그 걱정을 정면으로 해소합니다.</li></ul></div></div><div class="wcard"><div class="wnum">03</div><div class="wbody"><h3>또렷하게 올라가는 단계 설계</h3><ul><li>Set A·B·C가 학년과 레벨에 맞춰 정확히 나뉘고, 평균 Lexile이 <b>68L → 264L → 528L</b>로 계단처럼 상승합니다.</li><li><b>전 권에 SEL(사회정서학습) 주제가 매핑</b>되어, 영어와 인성을 함께 챙긴다는 명분이 생깁니다.</li></ul></div></div></div>
+</div></section>
+
+<!-- 05 3세트 단계 구성 -->
+<section><div class="wrap">
+  <div class="eyebrow"><span class="num">05</span> 3세트 단계 구성</div>
+  <h2>또렷하게 올라가는 레벨 사다리</h2>
+  <p class="lead">Set A·B·C가 학년과 레벨에 맞춰 정확히 36권씩 나뉘고, 평균 Lexile이 계단처럼 상승합니다. “A 끝나면 B, B 끝나면 C”로 레벨업 동선이 그대로 보입니다.</p>
+  <div class="setgrid"><article class="setcard a"><div class="banner"><img src="images/sets/setA.jpg" alt="Set A" loading="lazy"></div><div class="body"><div class="setbadge">A</div><h3>Set A</h3><div class="meta">GK · 유치 · HLL 1–3</div><div class="lx">68<small>L</small></div><div class="w">평균 24단어 · 읽기 입문 · 36권</div><div class="track"><i></i></div></div></article><article class="setcard b"><div class="banner"><img src="images/sets/setB.jpg" alt="Set B" loading="lazy"></div><div class="body"><div class="setbadge">B</div><h3>Set B</h3><div class="meta">G1 · 초1 · HLL 1–10</div><div class="lx">264<small>L</small></div><div class="w">평균 113단어 · 초기 독자 · 36권</div><div class="track"><i></i></div></div></article><article class="setcard c"><div class="banner"><img src="images/sets/setC.jpg" alt="Set C" loading="lazy"></div><div class="body"><div class="setbadge">C</div><h3>Set C</h3><div class="meta">G2 · 초2 · HLL 6–26</div><div class="lx">528<small>L</small></div><div class="w">평균 666단어 · 독립 독서 · 36권</div><div class="track"><i></i></div></div></article></div>
+  <div class="laddercap">레벨이 또렷하게 상승합니다 — 68L → 264L → 528L</div>
+</div></section>
+
+<!-- 06 온·오프 완벽 호환 -->
+<section><div class="wrap">
+  <div class="eyebrow"><span class="num">06</span> 온·오프 완벽 호환</div>
+  <h2>온라인 라이브러리와 실물 도서가 완벽 호환</h2>
+  <p class="lead">온라인으로 보던 그 책을, 그대로 실물로 이어서 읽을 수 있습니다.</p>
+  <div class="points">
+    <div class="point"><h3>모든 책이 1:1 매칭</h3><p>온라인 Highlights Library에 있는 책이 실물로도 그대로 존재합니다.</p></div><div class="point"><h3>출력물 LMS 다운로드</h3><p>워크시트·MCQ·정답지를 온라인 LMS에서 내려받아 출력할 수 있습니다.</p></div><div class="point"><h3>끊김 없는 전환</h3><p>온라인으로 읽던 책을 실물로 바로 이어 읽어, 학습이 끊기지 않습니다.</p></div>
+  </div>
+  <div style="margin-top:26px">
+    <figure class="secfig" style="margin:0">
+      <img src="images/photos/compat.jpg" alt="온라인 화면과 실물 도서, 워크시트 출력물" loading="lazy">
+      <figcaption>온라인으로 읽던 책이 실물 도서·워크시트로 그대로 이어집니다.</figcaption>
+    </figure>
+  </div>
+</div></section>
+
+<!-- 07 재독 효과 -->
+<section><div class="wrap">
+  <div class="eyebrow"><span class="num">07</span> 재독 효과</div>
+  <h2>온라인으로 본 책을 실물로 다시 읽으면</h2>
+  <p class="lead">“온라인에 같은 책이 있는데 왜 종이도?” — 중복이 아닙니다. 같은 책을 두 번 만나 학습이 깊어집니다.</p>
+  <div class="stats" style="margin-top:30px">
+    <div class="stat"><div class="big" style="font-size:24px">집중·정독</div><div class="lbl">화면 알림 없이 끝까지 몰입</div></div><div class="stat"><div class="big" style="font-size:24px">어휘 정착</div><div class="lbl">아는 내용이라 표현에 집중</div></div><div class="stat"><div class="big" style="font-size:24px">완독 경험</div><div class="lbl">손에 쥐고 읽는 한 권의 성취</div></div><div class="stat"><div class="big" style="font-size:24px">소장·전시</div><div class="lbl">책장에 쌓여 학부모에게 어필</div></div>
+  </div>
+</div></section>
+
+<!-- 08 도서 미리보기 -->
+<section><div class="wrap">
+  <div class="eyebrow"><span class="num">08</span> 도서 미리보기</div>
+  <h2>책을 펼쳐 보세요</h2>
+  <p class="lead">실제 책처럼 넘겨보며 글밥과 그림 수준을 직접 확인해 보세요.</p>
+  <div class="bk-wrap">
+    <div class="bk"><div class="bk-book">
+      <div class="bk-side l"><img id="hl-limg" alt="페이지"></div>
+      <div class="bk-side r"><img id="hl-rimg" alt="페이지"></div>
+      <div class="bk-spine"></div>
+      <div class="bk-leaf" id="hl-leaf">
+        <div class="bk-face front"><img id="hl-leafimg" alt=""></div>
+        <div class="bk-face back"><img id="hl-leafback" alt=""></div>
+      </div>
+    </div></div>
+    <div class="bk-ctrl">
+      <button id="hl-prev" aria-label="이전"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M15 18l-6-6 6-6"/></svg></button>
+      <span class="cnt" id="hl-cnt"></span>
+      <button id="hl-next" aria-label="다음"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 18l6-6-6-6"/></svg></button>
+    </div>
+    <div class="dots" id="hl-dots"></div>
+    <p class="bk-hint">버튼으로 넘기거나 아래 점을 눌러 원하는 펼침면으로 이동하세요 · 키보드 ←→ 로도 넘길 수 있습니다</p>
+  </div>
+</div></section>
+
+<!-- 09 전체 라인업 -->
+<section><div class="wrap">
+  <div class="eyebrow"><span class="num">09</span> 전체 라인업</div>
+  <h2>108권 전체를 한눈에</h2>
+  <p class="lead">표지가 곧 물량감입니다. 3세트 108권이 한 번에 학원 책장을 채웁니다.</p>
+  <div class="lineup" id="hl-lineup"></div>
+  <div style="text-align:center;margin-top:20px">
+    <button class="toggle-btn" id="hl-lineup-toggle">전체 108권 보기</button>
+  </div>
+</div></section>
+
+<!-- 10 가격 -->
+<section><div class="wrap">
+  <div class="eyebrow"><span class="num">10</span> 가격 · 구성</div>
+  <h2>가격 안내</h2>
+  <div class="price">
+    <div>
+      <div class="was" style="text-decoration:none;color:#9DB6AB">실물 도서 108권</div>
+      <div class="now">199,000원</div>
+      <div class="per">권당 약 1,840원 · 온라인 라이브러리는 별도 이용</div>
+    </div>
+    <ul>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 수준별 리더스 108권 (Set A·B·C)</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 온라인 Highlights Library와 완벽 호환</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> 워크시트·MCQ·정답지 LMS 다운로드</li>
+    </ul>
+  </div>
+</div></section>
+
+<!-- 11 도서 리스트 -->
+<section><div class="wrap">
+  <div class="eyebrow"><span class="num">11</span> 도서 리스트</div>
+  <h2>전체 도서 리스트 다운로드</h2>
+  <p class="lead">108권의 제목·세트(A·B·C)·레벨(Lexile)·HLL·장르·SEL 주제를 정리한 전체 목록입니다.</p>
+  <div class="dl">
+    <div class="dl-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg></div>
+    <div class="dl-txt"><h3>Highlights 4C 108권 전체 도서 리스트</h3><p>제목 · 세트 · Lexile · HLL · 장르 · SEL 주제 수록</p></div>
+    <a class="dl-btn list-link" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><path d="M7 10l5 5 5-5M12 15V3"/></svg> 리스트 다운로드</a>
+  </div>
+</div></section>
+
+<!-- 12 배송 -->
+<section><div class="wrap">
+  <div class="eyebrow"><span class="num">12</span> 배송 · 구매 안내</div>
+  <h2>주문 후 1일 이내 배송</h2>
+  <div class="ship">
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      <h3>1일 이내 배송</h3><p>주문 확인 후 영업일 기준 1일 이내 출고합니다.</p></div>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.7l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.7l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+      <h3>안전 포장</h3><p>도서 손상 없이 단단하게 포장해 배송합니다.</p></div>
+    <div class="item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 15h6"/></svg>
+      <h3>세금계산서 발행</h3><p>학원·기관 구매 시 세금계산서를 발행해 드립니다.</p></div>
+  </div>
+</div></section>
+
+<!-- 13 CTA -->
+<section class="cta" id="order"><div class="wrap">
+  <h2>지금 바로 주문하세요</h2>
+  <p>스마트스토어에서 간편하게 주문하고, 주문 후 1일 이내 받아보세요.</p>
+  <a class="btn lg order-link" href="#">주문하기</a>
+</div></section>
+
+<footer><div class="wrap"><b>YBM 콘텐츠사업팀</b><br>Highlights 4C Reading 108</div></footer>
+
+<script>
+var ORDER_URL = "https://smartstore.naver.com/ybm_e4u_phone/products/13648882088";
+var LIST_URL  = "files/highlights_4C_108_booklist.xlsx";
+document.querySelectorAll('.order-link').forEach(function(a){ if(ORDER_URL) a.href=ORDER_URL; a.target="_blank"; a.rel="noopener"; });
+document.querySelectorAll('.list-link').forEach(function(a){ if(LIST_URL){ a.href=LIST_URL; a.setAttribute('download',''); } a.target="_blank"; a.rel="noopener"; });
+
+var BLANKS=[0,14];   // 빈 페이지 위치 (파일 없이 흰 종이로 표시)
+var PAGES=[];
+for(var i=0;i<25;i++){
+  PAGES.push(BLANKS.indexOf(i)>=0 ? '' : 'images/preview/page'+String(i).padStart(2,'0')+'.jpg');
+}
+var COVERS=[];  // images/covers/cover001.jpg ~ cover108.jpg
+for(var i=1;i<=108;i++){ COVERS.push('images/covers/cover'+String(i).padStart(3,'0')+'.jpg'); }
+
+(function(){
+  var sp=0, busy=false;
+  var leaf=document.getElementById('hl-leaf'),
+      L=document.getElementById('hl-limg'), R=document.getElementById('hl-rimg'),
+      F=document.getElementById('hl-leafimg'), B=document.getElementById('hl-leafback'),
+      C=document.getElementById('hl-cnt'), D=document.getElementById('hl-dots'),
+      P=document.getElementById('hl-prev'), N=document.getElementById('hl-next');
+  function put(el, src){
+    if(src){ el.src=src; el.style.visibility='visible'; }
+    else { el.removeAttribute('src'); el.style.visibility='hidden'; }
+  }
+  function render(){
+    put(L, PAGES[sp]);
+    put(R, sp+1<PAGES.length ? PAGES[sp+1] : '');
+    C.textContent=PAGES.length?((sp+1)+(PAGES[sp+1]?('–'+(sp+2)):'')+' / '+PAGES.length):'페이지 준비 중';
+    P.disabled=(sp===0); N.disabled=(sp+2>=PAGES.length);
+    [].forEach.call(D.children,function(d,k){ d.className='dot'+(k===sp/2?' on':''); });
+  }
+  function go(d){
+    if(busy)return; var ns=sp+d*2; if(ns<0||ns>=PAGES.length)return; busy=true;
+    if(d>0){ put(F,PAGES[sp+1]); put(B,PAGES[ns]); }
+    else    { put(F,PAGES[ns+1]); put(B,PAGES[sp]); }
+    leaf.style.display='block';
+    if(d>0){ leaf.classList.remove('turning-next'); void leaf.offsetWidth; leaf.classList.add('turning-next'); }
+    else    { leaf.classList.add('turning-next'); void leaf.offsetWidth; leaf.classList.remove('turning-next'); }
+    setTimeout(function(){ sp=ns; render(); leaf.classList.remove('turning-next'); leaf.style.display='none'; busy=false; },690);
+  }
+  for(var k=0;k<PAGES.length;k+=2){
+    (function(idx){ var b=document.createElement('button'); b.className='dot';
+      b.onclick=function(){ if(busy||idx===sp)return; sp=idx; render(); }; D.appendChild(b); })(k);
+  }
+  PAGES.forEach(function(src){ if(src){ var im=new Image(); im.src=src; } });
+  P.onclick=function(){go(-1);}; N.onclick=function(){go(1);};
+  document.addEventListener('keydown',function(e){ if(e.key==='ArrowLeft')go(-1); if(e.key==='ArrowRight')go(1); });
+  leaf.style.display='none'; render();
+
+  var grid=document.getElementById('hl-lineup'), shown=40;
+  for(var n=0;n<COVERS.length;n++){
+    var c=document.createElement('div'); c.className='cell'+(n>=shown?' extra':'');
+    if(n>=shown) c.style.display='none';
+    var im=document.createElement('img'); im.src=COVERS[n]; im.loading='lazy'; im.alt='표지 '+(n+1);
+    c.appendChild(im); grid.appendChild(c);
+  }
+  var open=false;
+  document.getElementById('hl-lineup-toggle').onclick=function(){
+    open=!open;
+    grid.querySelectorAll('.extra').forEach(function(e){ e.style.display=open?'block':'none'; });
+    this.textContent=open?'접기':'전체 108권 보기';
+  };
+})();
+</script>
+</body>
+</html>
